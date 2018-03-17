@@ -9,9 +9,7 @@ router.get('/', function(req,res){
     res.render('hero');
 });
 
-router.get('/dashboard',function(req,res){
-    res.render('faculty');
-})
+
 router.get('/get-started', function(req, res){
     res.render('get-started');
 });
