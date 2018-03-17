@@ -9,13 +9,12 @@ var express         = require('express'),
 // setting the basic functionalities
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname + 'public'));
+app.use(express.static(__dirname + '/public'));
 app.use(methodOverride('_method'));
 
 //connecting to mongoose
 mongoose.Promise = global.Promise;
 
-// mongoose.connect("mongodb://localhost/kisaan_sewa");
 mongoose.connect("mongodb://bytecloud:bytecloud@ds012168.mlab.com:12168/technovate");
 
 //requiring model
@@ -28,11 +27,11 @@ app.use(require('express-session')({
 }));
 
 // Passport configuration
-app.use(passport.initialize());
-app.use(passport.session());
-passport.use(new localStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+// app.use(passport.initialize());
+// app.use(passport.session());
+// passport.use(new localStrategy(User.authenticate()));
+// passport.serializeUser(User.serializeUser());
+// passport.deserializeUser(User.deserializeUser());
 
 // Static data for all views
 app.use(function(req, res, next){
