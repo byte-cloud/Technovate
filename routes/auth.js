@@ -1,8 +1,6 @@
 var express = require('express')
 router  = express.Router();
 
-
-
 router.get('/signup/:email', function(req, res){
     res.render('signup');
 });
