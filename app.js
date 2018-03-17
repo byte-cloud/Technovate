@@ -5,8 +5,6 @@ var express         = require('express'),
     methodOverride  = require('method-override'),
     mongoose        = require('mongoose');
 
-
-
 // setting the basic functionalities
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
