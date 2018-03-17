@@ -22,7 +22,7 @@ router.post('/get-started', function(req, res){
             res.redirect('/get-started');
         }
         if(fest.owner == null){
-            res.render('signup-faculty');
+            res.redirect('/signup');
         }
         else
             res.redirect('/login');
@@ -33,8 +33,18 @@ router.get('/signup/:email', function(req, res){
     res.render('signup', {'username' : 'email'});
 });
 
+//for faculty
+router.get('/signup', function(req, res){
+    res.render('signup-faculty');
+});
+
 router.get('/login', function(req, res){
     res.render('login');
+});
+
+//for faculty
+router.post('/signup', function(req, res){
+    
 });
 
 // logic for signup
