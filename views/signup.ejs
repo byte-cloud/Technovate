@@ -17,20 +17,20 @@
                 <div class="col-xs-12">
                     <div class="form-wrap">
                         <h1>SIGN UP</h1>
-                            <form role="form" class="tab" action="javascript:;" method="post" id="login-form" autocomplete="off">
+                            <form role="form" class="tab" method="post" id="login-form" autocomplete="off">
                                 <div class="form-group">
-                                    <input type="text" name="" style="margin-top:10px;"  class="form-control" placeholder="Enter your Name" required>
-                                    <input type="tel" name="" style="margin-top:10px;" class="form-control" placeholder="Mobile No." required>
-                                    <input type="password" name="" style="margin-top:10px;" id="password" class="form-control" minlength="8" max="16" placeholder="Password" required>
+                                    <input type="text" name="name" style="margin-top:10px;"  class="form-control" placeholder="Enter your Name" required>
+                                    <input type="tel" name="mobileNo" style="margin-top:10px;" class="form-control" placeholder="Mobile No." required>
+                                    <input type="password" name="password" style="margin-top:10px;" id="password" class="form-control" minlength="8" max="16" placeholder="Password" required>
                                     <input type="password" name="" id="conf_password" class="form-control" minlength="8" max="16" placeholder="Confirm Password" 
                                             style="margin-top:10px;"    required>
                                     <p style="color:white;font-size:12px;padding-top:3px;">Password must be between 8 to 16 characters.</p>
                                 </div>
                                 <input type="submit"  id="btn-login" class="btn btn-custom btn-lg btn-block" value="Sign Up">
                             </form>
-                            <form role="form" class="tab">
-                                
-                            </form>
+                            <script>
+                                document.getElementById("#login-form").action = "/signup/" + username;
+                            </script>
                         </div>
                     </div> <!-- /.col-xs-12 -->
                 </div> <!-- /.row -->
