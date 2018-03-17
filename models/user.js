@@ -8,10 +8,7 @@ var userSchema = new mongoose.Schema({
     mobileNo: String,
     college: String,
     fest: String,
-    department: String,
     designation: String,
-    year: String,
-    branch: String
 });
 
 userSchema.plugin(passportLocalMongoose);

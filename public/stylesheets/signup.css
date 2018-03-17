@@ -14,21 +14,21 @@
         background:#101317 ;
         width: 30%;
     }
-    #login .form-wrap {
+    #signup .form-wrap {
         margin: 0 auto;
         width:30%;
     }
-    #login h1 {
+    #signup h1 {
         color: #1fa67b;
         font-size: 40px;
         text-align: center;
         font-weight: bold;
         padding-bottom: 20px;
     }
-    #login .form-group {
+    #signup .form-group {
         margin-bottom: 25px;
     }
-    #login .checkbox {
+    #signup .checkbox {
         margin-bottom: 20px;
         position: relative;
         -webkit-user-select: none;
@@ -38,7 +38,7 @@
         user-select: none;
 
     }
-    #login .checkbox.show:before {
+    #signup .checkbox.show:before {
         content: '\e013';
         color: #1fa67b;
         font-size: 17px;
@@ -47,7 +47,7 @@
         pointer-events: none;
         font-family: 'Glyphicons Halflings';
     }
-    #login .checkbox .character-checkbox {
+    #signup .checkbox .character-checkbox {
         width: 25px;
         height: 25px;
         cursor: pointer;
@@ -56,22 +56,22 @@
         vertical-align: middle;
         display: inline-block;
     }
-    #login .checkbox .label {
+    #signup .checkbox .label {
         color:white;
         font-size: 15px;
         font-weight: normal;
     }
-    #login .btn.btn-custom {
+    #signup .btn.btn-custom {
         font-size: 15px;
         margin-bottom: 20px;
     }
-    #login .forget {
+    #signup .forget {
         font-size: 15px;
         text-align: center;
         display: block;
         color:white;
     }
-    #login .forget:hover{
+    #signup .forget:hover{
         color: #D9CBCB
     }
     
@@ -92,3 +92,4 @@
     .btn-hover{
         color: black;
     }
+
