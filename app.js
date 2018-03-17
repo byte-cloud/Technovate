@@ -26,12 +26,12 @@ app.use(require('express-session')({
     saveUninitialized: false
 }));
 
-// Passport configuration
-// app.use(passport.initialize());
-// app.use(passport.session());
-// passport.use(new localStrategy(User.authenticate()));
-// passport.serializeUser(User.serializeUser());
-// passport.deserializeUser(User.deserializeUser());
+ //Passport configuration
+ app.use(passport.initialize());
+ app.use(passport.session());
+ passport.use(new localStrategy(User.authenticate()));
+ passport.serializeUser(User.serializeUser());
+ passport.deserializeUser(User.deserializeUser());
 
 // Static data for all views
 app.use(function(req, res, next){
@@ -41,8 +41,10 @@ app.use(function(req, res, next){
 
 // including the routes
 var indexRoutes = require('./routes/index');
+var profileRoutes = require('./routes/profile');
 
 app.use('/', indexRoutes);
+app.use('/profile', profileRoutes);
 
 app.listen('3000', function(){
     console.log("Technovate listening on port 3000");
