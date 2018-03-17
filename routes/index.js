@@ -8,6 +8,7 @@ var express = require('express')
 router.get('/', function(req,res){
     res.render('hero');
 });
+
 router.get('/dashboard',function(req,res){
     res.render('faculty');
 })
