@@ -35,6 +35,7 @@ app.use(require('express-session')({
 
 // Static data for all views
 app.use(function(req, res, next){
+    console.log("req body is " + req.user);
     res.locals.currentUser = req.user;
     next();
 });

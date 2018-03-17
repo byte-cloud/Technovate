@@ -32,11 +32,7 @@ router.post('/get-started', function(req, res){
 });
 
 router.get('/signup/:email', function(req, res){
-    res.render('signup');
-});
-
-router.get('/signup', function(req, res){
-    res.render('signup');
+    res.render('signup', {'username' : 'email'});
 });
 
 router.get('/login', function(req, res){
@@ -44,12 +40,12 @@ router.get('/login', function(req, res){
 });
 
 // logic for signup
-router.post('/signup', function(req, res){
-    var newUser = new User({username: req.body.username});
+router.post('/signup/:email', function(req, res){
+    var newUser = new User({username: req.params.email});
     User.register(newUser, req.body.password, function(err, user){
         if(err){
             console.log(err);
-            return res.redirect('/signup');
+            return res.redirect('/signup/:email');
         }
         passport.authenticate('local')(req, res, function(){
             User.findOneAndUpdate({username:req.body.username},req.body.user, function(err, updatedUser)
@@ -72,8 +68,8 @@ router.post('/login',passport.authenticate('local',{
 }), function(req, res) {   
 });
 
-router.get('/task_details', function(req, res){
-    res.render('task-details');
+router.get('/task', function(req, res){
+    res.render('task');
 });
 
 module.exports = router;
