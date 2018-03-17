@@ -12,22 +12,24 @@ var transporter = nodemailer.createTransport({
     }
 });
 
+// show faculty dashboard
 router.get('/', function (req, res) {
     res.render('faculty');
 });
 
+// show add organisers dialog to faculty
 router.get('/add', function(req, res){
     res.render('faculty/organisers');
 });
 
-router.post('/add',  function(req, res){
-    
-});
-
+// logic behind creating organisers
 router.post('/add', function(req, res){
     async.waterfall([
         function(callback){
             var user = new User(req.body);
+            user.college = currentUser.college;
+            user.designation = "Head Coordinator";
+            
             user.save(function (err, newUser) {
                 if (err) {
                     console.log(err);
