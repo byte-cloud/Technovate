@@ -1,7 +1,9 @@
-var express = require('express'),
-    mongoose = require('mongoose'),
-    Fest = require('../models/fest.js'),
-    router  = express.Router();
+var express = require('express')
+    router  = express.Router(),
+    mongoose    = require('mongoose'),
+    passport    = require('passport'),
+    User        = require('../models/user'),
+    Fest = require('../models/fest.js');
     
 router.get('/', function(req,res){
     res.render('hero');
@@ -36,6 +38,35 @@ router.get('/signup', function(req, res){
 
 router.get('/login', function(req, res){
     res.render('login');
+});
+
+// logic for signup
+router.post('/signup', function(req, res){
+    var newUser = new User({username: req.body.username});
+    User.register(newUser, req.body.password, function(err, user){
+        if(err){
+            console.log(err);
+            return res.redirect('/signup');
+        }
+        passport.authenticate('local')(req, res, function(){
+            User.findOneAndUpdate({username:req.body.username},req.body.user, function(err, updatedUser)
+            {
+                if(err)
+                {
+                    console.log(err);
+                    return;
+                }
+                res.redirect('/');
+            });
+        });
+    });
+});
+
+// logic for login
+router.post('/login',passport.authenticate('local',{
+    successRedirect : "/",
+    failureRedirect: "/login"
+}), function(req, res) {   
 });
 
 module.exports = router;
