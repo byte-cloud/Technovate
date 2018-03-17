@@ -12,6 +12,18 @@ var transporter = nodemailer.createTransport({
     }
 });
 
+router.get('/', function (req, res) {
+    res.render('faculty');
+});
+
+router.get('/add', function(req, res){
+    res.render('faculty/organisers');
+});
+
+router.post('/add',  function(req, res){
+    
+});
+
 router.post('/add', function(req, res){
     async.waterfall([
         function(callback){
