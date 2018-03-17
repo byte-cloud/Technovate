@@ -17,8 +17,6 @@ mongoose.Promise = global.Promise;
 // mongoose.connect("mongodb://localhost/kisaan_sewa");
 mongoose.connect("mongodb://bytecloud:bytecloud@ds012168.mlab.com:12168/technovate");
 
-
-
 // including the routes
 var indexRoutes = require('./routes/index');
 

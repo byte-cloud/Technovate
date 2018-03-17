@@ -11,7 +11,7 @@ var transporter = nodemailer.createTransport({
   const mailOptions = {
     to: 'gauravw0407@gmail.com', // list of receivers
     subject: 'Sign Up for technovate', // Subject line
-    html: '<a href="http://localhost:3000/signup/gauravw0407@gmail.com">www.technovate.com/signup</a>'// plain text body
+    html: '<a href="http://localhost:3000/auth/signup/gauravw0407@gmail.com">www.technovate.com/auth/signup</a>'// plain text body
   };
 
   transporter.sendMail(mailOptions, function (err, info) {
