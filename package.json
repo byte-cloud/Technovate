@@ -1,0 +1,19 @@
+{
+  "name": "technovate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byte-cloud/Technovate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/byte-cloud/Technovate/issues"
+  },
+  "homepage": "https://github.com/byte-cloud/Technovate#readme"
+}
