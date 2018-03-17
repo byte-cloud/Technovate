@@ -8,7 +8,9 @@ var express = require('express')
 router.get('/', function(req,res){
     res.render('hero');
 });
-
+router.get('/dashboard',function(req,res){
+    res.render('faculty');
+})
 router.get('/get-started', function(req, res){
     res.render('get-started');
 });
@@ -21,7 +23,7 @@ router.post('/get-started', function(req, res){
             res.redirect('/get-started');
         }
         if(fest.owner == null){
-            res.redirect('/signup');
+            res.render('signup-faculty');
         }
         else
             res.redirect('/login');
