@@ -42,9 +42,11 @@ app.use(function(req, res, next){
 // including the routes
 var indexRoutes = require('./routes/index');
 var profileRoutes = require('./routes/profile');
+var facultyRoutes = require('./routes/faculty');
 
 app.use('/', indexRoutes);
 app.use('/profile', profileRoutes);
+app.use('/faculty', facultyRoutes);
 
 app.listen('3000', function(){
     console.log("Technovate listening on port 3000");
