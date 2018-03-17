@@ -22,7 +22,7 @@ router.post('/get-started', function(req, res){
             res.redirect('/get-started');
         }
         if(fest.owner == null){
-            res.render('signup-faculty');
+            res.redirect('/signup');
         }
         else
             res.redirect('/login');
@@ -30,24 +30,30 @@ router.post('/get-started', function(req, res){
 });
 
 router.get('/signup/:email', function(req, res){
-    res.render('signup');
+    res.render('signup', {'username' : 'email'});
 });
 
+//for faculty
 router.get('/signup', function(req, res){
-    res.render('signup');
+    res.render('signup-faculty');
 });
 
 router.get('/login', function(req, res){
     res.render('login');
 });
 
-// logic for signup
+//for faculty
 router.post('/signup', function(req, res){
-    var newUser = new User({username: req.body.username});
+    
+});
+
+// logic for signup
+router.post('/signup/:email', function(req, res){
+    var newUser = new User({username: req.params.email});
     User.register(newUser, req.body.password, function(err, user){
         if(err){
             console.log(err);
-            return res.redirect('/signup');
+            return res.redirect('/signup/:email');
         }
         passport.authenticate('local')(req, res, function(){
             User.findOneAndUpdate({username:req.body.username},req.body.user, function(err, updatedUser)
@@ -68,6 +74,10 @@ router.post('/login',passport.authenticate('local',{
     successRedirect : "/",
     failureRedirect: "/login"
 }), function(req, res) {   
+});
+
+router.get('/task', function(req, res){
+    res.render('task');
 });
 
 module.exports = router;
