@@ -69,4 +69,8 @@ router.post('/login',passport.authenticate('local',{
 }), function(req, res) {   
 });
 
+router.get('/task_details', function(req, res){
+    res.render('task-details');
+});
+
 module.exports = router;
