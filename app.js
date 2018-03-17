@@ -14,7 +14,6 @@ app.use(methodOverride('_method'));
 //connecting to mongoose
 mongoose.Promise = global.Promise;
 
-// mongoose.connect("mongodb://localhost/kisaan_sewa");
 mongoose.connect("mongodb://bytecloud:bytecloud@ds012168.mlab.com:12168/technovate");
 
 //requiring model
