@@ -1,75 +1,9 @@
-$(document).ready(function() {
-    
-        var stepwizardBtns  = $('div.setup-panel div a'),
-    
-            stepInfos       = $('.setup-content'),
-    
-            allNextBtns     = $('.nextBtn');
-    
-            
-    
-        stepInfos.hide();
-    
-        stepwizardBtns.click(function(e){
-    
-            e.preventDefault();
-    
-            var $target = $($(this).attr('href')),
-    
-                $item   = $(this);
-    
-            if(!$item.hasClass('disabled')){
-    
-                stepwizardBtns.removeClass('btn-primary').addClass('btn-default');
-    
-                $item.addClass('btn-primary').removeClass('btn-default');
-    
-                stepInfos.hide();
-    
-                $target.show();
-    
-                $target.find('input:eq(0)').focus();
-    
-            }
-    
-        });
-    
-        
-    
-        allNextBtns.click(function(){
-    
-            var curStep     = $(this).closest('.setup-content'),
-    
-            curStepBtn      = curStep.attr('id'),
-    
-            nextStepWizard  = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children('a'),
-    
-            curInputs       = curStep.find('input[type="text"],input[type="tel"],input[type="email"],input[type="date"]'),
-    
-            isValid         = true;
-    
-          $(".form-group").removeClass("has-error");
-    
-          for(var i=0; i<curInputs.length; i++){
-    
-              if (!curInputs[i].validity.valid){
-    
-                  isValid = false;
-    
-                  $(curInputs[i]).closest(".form-group").addClass("has-error");
-    
-              }
-    
-          }
-    
-          if (isValid){
-    
-              nextStepWizard.removeAttr('disabled').trigger('click');
-    
-          }
-    
-        });
-    
-        $('div.setup-panel div a.btn-primary').trigger('click');
-    
-    });
+function ValidatePassword() {
+    var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{10,12}$/;
+    var txt = document.getElementById("key");
+    if (!regex.test(txt.value)) {
+        alert("Password strength is not good.");
+    } else {
+        alert("Password strength is good.");
+    }
+}
