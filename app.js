@@ -2,6 +2,7 @@ var express         = require('express'),
     app             = express(),
     bodyParser      = require('body-parser'),
     passport        = require('passport'),
+    localStrategy   = require('passport-local'),
     methodOverride  = require('method-override'),
     mongoose        = require('mongoose');
 
