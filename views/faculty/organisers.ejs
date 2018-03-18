@@ -1,17 +1,17 @@
 <% include ./facultyheader.ejs %>
 
     <div class="myclass" style="width:50%; padding-top:1px; margin:auto; margin-top:100px;">
-        <h1 class="title-arch" style="size:120px;font-weight:800;text-shadow:1px 1px 1px #aaa;color:#1fa67b; text-align:center ">ADD ORGANISERS</h1>
+        
         <div class="row">
             <!-- left column -->
-            <div class="col-md-3">
+            <div class="col-md-2">
                
             </div>
 
             <!-- edit form column -->
-            <div class="col-md-6 personal-info">
+            <div class="col-md-8 personal-info">
                 <form class="form-horizontal" role="form">
-                    
+                        <h1 class="title-arch" style="size:120px;font-weight:800;color:#1fa67b; text-align:center ">ADD ORGANISERS</h1>
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Email:</label>
                         <div class="col-lg-8">
@@ -41,16 +41,21 @@
                     <div class="form-group">
                         <label class="col-md-3 control-label"></label>
                         <div class="col-md-8">
-                            <input class="btn" style="backgound-color:#1fa67b; color:white" value="Save Changes" type="button">
+                            <input class="btn save-btn" value="Save Changes" type="button">
                             <span></span>
-                            <input class="btn btn-default cancel-btn" value="Cancel" type="reset">
+                            <input class="btn cancel-btn" value="Cancel" type="reset">
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
+<style>
+    .save-btn , .cancel-btn {
+    background-color: #1fa67b;
+    color:white;
+}
+</style>
 
 
 </body>
