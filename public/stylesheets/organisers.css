@@ -1,7 +1,8 @@
 
  .myclass{
-    background-color: #E6E9EC ;
-    
+    background-color: #fbfcfc ;
+    min-height: 100%;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3), 0 5px 5px 0 rgba(0, 0, 0, 0.3);
 }
 
 

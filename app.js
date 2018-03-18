@@ -35,8 +35,7 @@ app.use(require('express-session')({
 
 // Static data for all views
 app.use(function(req, res, next){
-    console.log("req body is " + req.user);
-    res.locals.currentUser = req.user;
+    app.locals.currentUser = req.user;
     next();
 });
 
@@ -44,10 +43,13 @@ app.use(function(req, res, next){
 var indexRoutes = require('./routes/index');
 var profileRoutes = require('./routes/profile');
 var facultyRoutes = require('./routes/faculty');
+var organiserRoutes = require('./routes/organiser');
 
 app.use('/', indexRoutes);
 app.use('/profile', profileRoutes);
 app.use('/faculty', facultyRoutes);
+app.use('/organiser', organiserRoutes);
+
 
 app.listen('3000', function(){
     console.log("Technovate listening on port 3000");

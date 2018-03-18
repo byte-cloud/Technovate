@@ -55,13 +55,14 @@ router.post('/add', function(req, res){
 
 
 router.get('/profile', function(req, res){
-    User.findOne({ username: currentUser.username }, function (err, user) {
-        if (err) {
-            console.log(err);
-            res.redirect('/faculty');
-        }
-        res.render('faculty/profile', { user: user });
-    });
+    // User.findOne({ username: req.app.locals.currentUser.username }, function (err, user) {
+    //     if (err) {
+    //         console.log(err);
+    //         res.redirect('/faculty');
+    //     }
+    //     console.log("\n \n \nUser is :" + user + "\n \n \n \n");
+    //     res.render('faculty/profile', { 'user': user });
+    // });
     res.render('faculty/profile')
 });
 
