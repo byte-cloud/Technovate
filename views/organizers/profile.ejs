@@ -1,0 +1,86 @@
+<% include ./facultyheader.ejs %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="profile.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    
+    
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <h1 style="color:#1fa67b ;font-weight :700 ; font-size:40px" >Edit Profile</h1>
+    <hr>
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-3">
+            <div class="text-center">
+                <img src="noimage.png" class="avatar img-circle" alt="avatar">
+                <h6>Upload a different photo...</h6>
+                <input class="form-control" type="file" style="background:#E6E9EC" > 
+            </div>
+        </div>
+
+        <!-- edit form column -->
+        <div class="col-md-9 personal-info">
+            
+            <h3 style="color:#1fa67b ;font-weight :700 ; font-size:30px" >Personal info</h3>
+
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-lg-3 control-label"><%= user.name%></label>
+                    <div class="col-lg-8">
+                        <input class="form-control" value="Jane" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label"><%= user.college %></label>
+                    <div class="col-lg-8">
+                        <input class="form-control" value="NIT-RAIPUR" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label"><%= user.mobileNo%></label>
+                    <div class="col-lg-8">
+                        <input class="form-control" value="" type="tel">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label"><%= user.username%></label>
+                    <div class="col-lg-8">
+                        <input class="form-control" value="janesemail@gmail.com" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label"><%= user.designation%></label>
+                    <div class="col-lg-8">
+                        <input class="form-control" value="Core-member" type="text">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-md-3 control-label"></label>
+                    <div class="col-md-8">
+                        <input class="btn "  value="Save Changes" type="button">
+                        <span></span>
+                        <input class="btn btn-default" value="Cancel" type="reset">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<hr >
+
+
+
+</body>
+</html>
