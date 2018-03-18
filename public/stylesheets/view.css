@@ -1,0 +1,96 @@
+*{
+    background-color:  #fbfcfc ;
+}
+
+
+.title-arch {
+        
+        color:black;
+		text-align: center;
+		margin: 50px 0;
+		font-size: 40px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+.project {
+    background-image: url(123.jpeg);
+	width: 100%;
+	height: 300px;
+    background-size: cover;
+	background-position: center;
+    padding: 0 !important; 
+    /* margin-right: 6px; */
+    float:left;
+    /* padding: 80px; */
+    margin-left: 70px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3), 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.project-2 {
+	background-image: url(index.jpeg);
+}
+
+.project-3 {
+    background-image: url();
+}
+
+.project-4 {
+	background-image: url();
+}
+
+.project-hover {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	opacity: 0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	background-color: rgba(0, 0, 0, 0.3);
+    padding: 30% 30px !important;
+    /* padding-bottom: 100px; */
+}
+
+.project-hover hr {
+	height: 30px;
+	width: 0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	background-color: rgba(255, 255, 255, 1);
+    border: 0;
+    margin-bottom: 10px;
+
+}
+
+.project-hover a {
+	color: rgba(255, 255, 255, 1);
+    padding: 2px 22px;
+	line-height: 40px;
+	border: 2px solid rgba(255, 255, 255, 1);
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.project-hover a:hover {
+	border-color: rgba(51, 51, 51, 1);
+	color: rgba(51, 51, 51, 1);
+	background-color: #FFF;
+}
+
+.project:hover .project-hover {
+	opacity: 1;
+}
+
+.project:hover .project-hover hr {
+	width: 100%;
+	height: 5px;
+}
+
+.project-hover p,h2 {
+    background-color: initial;
+}

@@ -1,5 +1,23 @@
-<% include ./facultyheader.ejs %>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet"  type="text/css" href="designation.css">
+    <link rel="stylesheet" type="text/css" href="assignOrganiser.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+
+    <title>Document</title>
+</head>
+
+<body>
     <div class="container myclass">
         <h1 style="color:#1fa67b ;font-weight :700 ; font-size:40px;text-align:center;">SELECT ORGANISERS</h1>
         <div class="row">
@@ -20,18 +38,15 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-lg-3 control-label">Assign Department</label>
+                        <label class="col-lg-3 control-label">Designation</label>
                         <div class="col-lg-8">
                             <div class="ui-select">
                                 <select id="department" class="form-control">
-                  <option value="spons">Sponsership</option>
-                  <option value="managment">Managment Team</option>
-                  <option value="events">Event Organiser</option>
-                  <option value="media">Media and Publicity</option>
-                  <option value="trans">Transportation</option>
-                  <option value="creative" selected="selected">Creative Team</option>
-                  <option value="technical"> technical</option>
-                  <option value="doc">Documentation</option>
+                  <option value="head">Head-Co-ordinator</option>
+                  <option value="Core">Core-Member</option>
+                  <option value="Exe">Excecutive-Member</option>
+                  <option value="vol">Volunteer</option>
+                  <
                 </select>
                             </div>
                         </div>
@@ -41,9 +56,9 @@
                     <div class="form-group">
                         <label class="col-md-3 control-label"></label>
                         <div class="col-md-8">
-                            <input class="btn save-btn" value="Save Changes" type="button">
+                            <input class="btn " value="Save Changes" type="button">
                             <span></span>
-                            <input class="btn btn-default cancel-btn" value="Cancel" type="reset">
+                            <input class="btn btn-default" value="Cancel" type="reset">
                         </div>
                     </div>
                 </form>
