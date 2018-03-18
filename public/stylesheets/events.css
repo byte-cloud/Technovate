@@ -18,7 +18,7 @@ body {font-family: 'Open Sans', sans-serif;}
     /* background: #f1f1f1; */
 }
 
-/* Add a background color when the inputs get focus */
+/* Add a background color */
 .form-group:focus {
     background-color: #ddd;
     outline: none;
