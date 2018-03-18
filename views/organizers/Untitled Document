@@ -15,6 +15,7 @@ body { padding-top: 68px; }
 .festname:hover{
     text-decoration: underline;
 }
+/* nav bar */
 .navbar-default {
     height:80px;
     font-size: 23px;
@@ -23,21 +24,16 @@ body { padding-top: 68px; }
     background-color: #101317;
     width: 100%;
 }
-.navbar-default {
+.navbar-default .navbar-nav .zoom{
 text-align: center;
 margin-top: 15px;
 color: #fff;
 }
-/* 
-.navbar-nav .zoom */
-
-.navbar-default {
+.navbar-default .navbar-nav .zoom:hover,
+.navbar-default .navbar-nav .zoom:active,
+.navbar-default .navbar-nav .zoom:focus{
     text-align: center;
     margin-top: 10px;
     text-decoration:underline;
     color: #fff;
     }
-/* 
-.navbar-default .navbar-nav .zoom:hover,
-.navbar-default .navbar-nav .zoom:active,
-    .navbar-nav .zoom:focus */
