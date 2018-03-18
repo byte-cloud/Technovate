@@ -77,7 +77,7 @@ router.post('/login',passport.authenticate('local',{
 });
 
 router.get('/task', function(req, res){
-    res.render('task');
+    res.render('faculty/task');
 });
 
 module.exports = router;

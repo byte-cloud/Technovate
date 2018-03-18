@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="../../public/stylesheets/events.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    </head>
+    <body>
+        <div  style="text-align:center;">  
+            <h3>Click here for adding the events </h3>
+            <button class="btn btn-custom" onclick="document.getElementById('id01').style.display='block'" style="width:auto;color:white">Add Events</button>
+        </div>
+        <div id="id01" class="modal">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <form class="modal-content" action="/action_page.php">
+            <div class="container labdiv">
+              <h1 style="color:#1fa67b">Add Events</h1>
+              <div class="form-group">
+                  <input type="text" name="username" id="text" class="form-control" placeholder="Enter event's name" required>
+              </div>
+              <div class="form-group">
+                  <textarea id="key" class="form-control" rows="4" cols="15" placeholder="Enter Event's Description" required></textarea>
+              </div>
+              <div class="form-group">
+                <button type="button" style="margin-right:5px;color:white" onclick="document.getElementById('addMember').style.display='block'" class="addmem">Add Members</button>
+                <button type="button" style="color:white" class="addmem">Done</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div id="addMember" class="modal">
+                <span onclick="document.getElementById('addMember').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <form class="modal-content" action="/action_page.php">
+                  <div class="container labdiv">
+                    <div class="form-group">
+                        <input type="text" name="username" id="text" autocomplete="off" class="form-control" id="usernameField" placeholder="Enter username" required>
+                    </div>
+                    <div class="form-group">
+                      <button type="button" style="margin-right:5px;color:white" onclick="" class="addmem">Add</button>
+                      <button type="button" style="color:white" class="addmem">Cancel</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+        
+        <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        var modal1 = document.getElementById('addMember');
+
+        window.onclick = function(event){
+            if(event.target == modal)
+                modal.style.display = "none";
+        }
+        </script>
+    </body>
+</html>
