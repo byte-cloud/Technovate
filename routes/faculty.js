@@ -14,7 +14,7 @@ var transporter = nodemailer.createTransport({
 
 // show faculty dashboard
 router.get('/', function (req, res) {
-    res.render('faculty');
+    res.render('faculty/view');
 });
 
 // show add organisers dialog to faculty
@@ -54,5 +54,9 @@ router.post('/add', function(req, res){
     });
 }); 
 
+
+router.get('/profile', function(req, res){
+    res.render('faculty/profile')
+});
 
 module.exports = router;

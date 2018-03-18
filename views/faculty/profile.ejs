@@ -1,36 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/profile.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<% include ./facultyheader.ejs %>
+<style>
+.pro{
+    background-color: #E6E9EC ;
     
-    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-    
-    <title>Document</title>
-</head>
-<body>
-<div class="container">
-    <h1 style="color:#1fa67b ;font-weight :700 ; font-size:40px" >Edit Profile</h1>
+}
+
+
+.btn {
+    background-color: #1fa67b;
+    color:white;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.form-control{
+border: "none" ; 
+box-shadow: "unset";
+}
+
+hr{
+    background-color: black;
+}
+</style>
+
+<div class="container pro">
+    <h1 style="color:#1fa67b ;font-weight :700 ; font-size:35px" >Edit Profile</h1>
     <hr>
     <div class="row">
         <!-- left column -->
         <div class="col-md-3">
-            <div class="text-center">
+            <div class="text-center" style="padding-bottom:10px;" >
                 <img src="noimage.png" class="avatar img-circle" alt="avatar">
                 <h6>Upload a different photo...</h6>
-                <input class="form-control" type="file" style="background:#E6E9EC" > 
+                <input class="form-control"type="file" style="background:#E6E9EC;" > 
             </div>
         </div>
 
         <!-- edit form column -->
         <div class="col-md-9 personal-info">
             
-            <h3 style="color:#1fa67b ;font-weight :700 ; font-size:30px" >Personal info</h3>
+            <h3 style="color:#1fa67b ;font-weight :700 ; font-size:25px" >Personal Info:</h3>
 
             <form class="form-horizontal" role="form">
                 <div class="form-group">
