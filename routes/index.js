@@ -30,7 +30,7 @@ router.post('/get-started', function(req, res){
 });
 
 router.get('/signup/:email', function(req, res){
-    res.render('signup', {'username' : 'email'});
+    res.render('signup', {'username' : req.params.email});
 });
 
 //for faculty

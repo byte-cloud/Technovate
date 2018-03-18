@@ -17,7 +17,7 @@
                 <div class="col-xs-12">
                     <div class="form-wrap">
                         <h1>SIGN UP</h1>
-                            <form role="form" class="tab" method="post" id="login-form" autocomplete="off">
+                            <form role="form" action="/signup/<%=username%>" class="tab" method="post" id="login-form" autocomplete="off">
                                 <div class="form-group">
                                     <input type="text" name="name" style="margin-top:10px;"  class="form-control" placeholder="Enter your Name" required>
                                     <input type="tel" name="mobileNo" style="margin-top:10px;" class="form-control" placeholder="Mobile No." required>
@@ -28,9 +28,6 @@
                                 </div>
                                 <input type="submit"  id="btn-login" class="btn btn-custom btn-lg btn-block" value="Sign Up">
                             </form>
-                            <script>
-                                document.getElementById("#login-form").action = "/signup/" + username;
-                            </script>
                         </div>
                     </div> <!-- /.col-xs-12 -->
                 </div> <!-- /.row -->
