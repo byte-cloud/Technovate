@@ -1,8 +1,8 @@
-*{
-    background-color: #E6E9EC ;
+body{
+    background-color: #101317 ;
 }
 
-.save-btn .cancel-btn {
+.save-btn , .cancel-btn {
     background-color: #1fa67b;
     color:white;
 }
@@ -12,5 +12,8 @@ img {
 }
 
 .hr-profile{
-background-color: black
+background-color: #101317
+}
+.control-label{
+    color: white;
 }
