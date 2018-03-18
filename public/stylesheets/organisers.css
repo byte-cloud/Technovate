@@ -1,0 +1,24 @@
+
+ .myclass{
+    background-color: #E6E9EC ;
+    
+}
+
+
+.save-btn .cancel-btn{
+    background-color: #1fa67b;
+    color:white;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.form-control{
+border: "none" ; 
+box-shadow: "unset";
+}
+
+hr{
+    background-color: black
+}
