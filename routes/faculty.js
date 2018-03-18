@@ -47,7 +47,6 @@ router.post('/add', function(req, res){
     function(err, result){
         if(err){
             console.log(err);
-            
         }
     });
 }); 
