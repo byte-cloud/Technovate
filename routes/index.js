@@ -30,16 +30,16 @@ router.post('/get-started', function(req, res){
 });
 
 router.get('/signup/:email', function(req, res){
-    res.render('signup', {'username' : req.params.email});
+    res.render('auth/signup', {'username' : req.params.email});
 });
 
 //for faculty
 router.get('/signup', function(req, res){
-    res.render('signup-faculty');
+    res.render('faculty/signup-faculty');
 });
 
 router.get('/login', function(req, res){
-    res.render('login');
+    res.render('auth/login');
 });
 
 //for faculty
@@ -93,7 +93,7 @@ router.post('/login',passport.authenticate('local',{
 });
 
 router.get('/task', function(req, res){
-    res.render('task');
+    res.render('faculty/task');
 });
 
 module.exports = router;
