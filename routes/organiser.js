@@ -2,6 +2,7 @@ var express = require('express'),
     router = express.Router(),
     mongoose = require('mongoose'),
     User = require('../models/user.js'),
+    Events = require('../models/event.js')
     nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
@@ -52,6 +53,25 @@ router.post('/add', function (req, res) {
     //         }
     //     });
 });
+
+// router.get('/events/',function(req, res){
+//     Events.find({festname:req.app.locals.currentUser.fest})
+//     if(err){
+//         console.log(err);
+//         res.redirect('/');
+//     }
+//     res.render('organizers/event', {'events':})
+// });
+
+// router.post('/events/', function(req, res){
+//     var event = new Events(req.body);
+//     event.save(function(err, newEvent){
+//         if(err){
+//             console.log(err);
+//         }
+//         res.redirect('events');
+//     });
+// });
 
 
 router.get('/profile', function (req, res) {
