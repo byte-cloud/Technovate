@@ -15,6 +15,7 @@
 .festname:hover{
     text-decoration: underline;
 }
+
 .navbar-default {
     height:80px;
     font-size: 23px;
@@ -41,3 +42,6 @@ color: #fff;
 .navbar-default .navbar-nav .zoom:hover,
 .navbar-default .navbar-nav .zoom:active,
     .navbar-nav .zoom:focus */ 
+.navitems{
+    color: white;
+    }

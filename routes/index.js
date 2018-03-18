@@ -35,7 +35,7 @@ router.get('/signup/:email', function(req, res){
 
 //for faculty
 router.get('/signup', function(req, res){
-    res.render('faculty/signup-faculty');
+    res.render('auth/signup-faculty');
 });
 
 router.get('/login', function(req, res){
