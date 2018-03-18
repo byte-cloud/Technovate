@@ -44,7 +44,22 @@ router.get('/login', function(req, res){
 
 //for faculty
 router.post('/signup', function(req, res){
-    
+  var newUser = new User({ username: req.body.username, password: req.body.password, 
+    name: req.body.name, mobileNo: req.body.mobileNo, college: req.body.college});
+    console.log(newUser);
+  newUser.save(function(err) {
+    if(err) {
+      console.log(err);
+    } else {
+      console.log('user: ' + newUser.username + " saved.");
+      req.login(newUser, function(err) {
+        if (err) {
+          console.log(err);
+        }
+        return res.redirect('/');
+      });
+    }
+  });
 });
 
 // logic for signup
@@ -53,16 +68,17 @@ router.post('/signup/:email', function(req, res){
     User.register(newUser, req.body.password, function(err, user){
         if(err){
             console.log(err);
-            return res.redirect('/signup/:email');
+            return res.redirect('/signup/'+req.params.email);
         }
-        passport.authenticate('local')(req, res, function(){
-            User.findOneAndUpdate({username:req.body.username},req.body.user, function(err, updatedUser)
-            {
+        User.findOneAndUpdate({username: req.params.email},req.body, function(err, updatedUser)
+        {
+            if(err)                {
+                 console.log(err);
+                return;
+            }
+            req.login(updatedUser, function(err){
                 if(err)
-                {
-                    console.log(err);
-                    return;
-                }
+                    console.lof(err);
                 res.redirect('/');
             });
         });
