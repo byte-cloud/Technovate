@@ -1,7 +1,7 @@
-*{
+/* *{
     font-family: 'Roboto Slab', serif;
 }
-body { padding-top: 68px; }
+ body { padding-top: 68px; }
 .festname, .festname:hover{
     color: white;
     text-align: center;
@@ -28,8 +28,8 @@ text-align: center;
 margin-top: 15px;
 color: #fff;
 }
-/* 
-.navbar-nav .zoom */
+
+.navbar-nav .zoom
 
 .navbar-default {
     text-align: center;
@@ -37,7 +37,7 @@ color: #fff;
     text-decoration:underline;
     color: #fff;
     }
-/* 
+
 .navbar-default .navbar-nav .zoom:hover,
 .navbar-default .navbar-nav .zoom:active,
-    .navbar-nav .zoom:focus */
+    .navbar-nav .zoom:focus */ 

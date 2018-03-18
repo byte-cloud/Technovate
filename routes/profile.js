@@ -10,11 +10,9 @@ router.get('/:username', function(req, res){
     User.findOne({username: req.params.username}, function(err, user){
         if (err) {
             console.log(err);
-            return res.status(502).end(); //bad request
+            res.redirect('/faculty');
         }
-        res.status(200);
-        console.log("GET: User Details");
-        res.json(user).end();
+        res.render('faculty/profile', {user: user});
     });
 });
 

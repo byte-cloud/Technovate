@@ -56,6 +56,13 @@ router.post('/add', function(req, res){
 
 
 router.get('/profile', function(req, res){
+    User.findOne({ username: currentUser.username }, function (err, user) {
+        if (err) {
+            console.log(err);
+            res.redirect('/faculty');
+        }
+        res.render('faculty/profile', { user: user });
+    });
     res.render('faculty/profile')
 });
 
